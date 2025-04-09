@@ -135,7 +135,7 @@ jobs:
       - name: Tag manifest list
         if: ${{ inputs.tags != '' }}
         run: |
-          IFS=',' read -r -a tags <<< "{{ inputs.tags }}"
+          IFS=',' read -r -a tags <<< "${{ inputs.tags }}"
           for tag in "${tags[@]}"; do
             tag=$(echo "${tag}" | tr -d '[:space:]')
             podman tag ${OCI_IMAGE}:${OCI_IMAGE_TAG} ${OCI_IMAGE}:${tag}
