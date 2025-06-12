@@ -23,6 +23,6 @@ spec:
             path: /demos/basic-nginx-demo/deployment
       systemd:
         matchPatterns:
-          - "microshift.service"
+          - "microshift@service"
           - "crio.service"
           - "flightctl-agent.service"
