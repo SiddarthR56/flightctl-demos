@@ -21,11 +21,6 @@ spec:
             repository: basic-nginx-demo
             targetRevision: main
             path: /demos/basic-nginx-demo/deployment
-        - name: ricky-super-secrets
-          gitRef:  
-            repository: ricky-super-secrets
-            targetRevision: main
-            path: /configuration
       systemd:
         matchPatterns:
           - "microshift.service"
